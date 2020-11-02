@@ -5,9 +5,18 @@ install:
   # npm ci
   - yarn install
 script:
-  # npm run docs:build
-  # - yarn docs:build
-  - deploy.sh
+  - yarn build:docs
+after_success:
+  # 进入生成的文件夹
+  - cd docs/.vuepress/dist
+  - git init
+  - git config --local user.name "${USER_NAME}"
+  - git config --local user.email "${USER_EMAIL}"
+  - git add -A
+  - git commit -m 'deploy'
+  - git push -f https://${GITHUB_TOKEN}@github.com/wefesenlin/wefesenlin.github.io.git master
+
+  # - deploy.sh
 # deploy:
   # provider: pages
   # cleanup: true
