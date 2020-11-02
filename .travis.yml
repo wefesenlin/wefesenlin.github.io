@@ -7,7 +7,7 @@ install:
 script:
   # npm run docs:build
   # - yarn docs:build
-  - ./deploy.sh
+  - deploy.sh
 # deploy:
   # provider: pages
   # cleanup: true
