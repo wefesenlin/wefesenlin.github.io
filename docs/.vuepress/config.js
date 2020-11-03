@@ -6,7 +6,7 @@ const nav = require("./config/nav");
  * see: https://www.vuepress.cn/config/#基本配置
  */
 module.exports = {
-  base: '/wefesenlin/',
+  base: '/',
   title: "森林博客",
   description: "森林博客",
   themeConfig: {
