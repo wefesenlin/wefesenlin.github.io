@@ -4,7 +4,7 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "deploy": "bash ./deplooy.sh"
+    "deploy": "bash .deploy.sh"
   },
   "devDependencies": {
     "@vssue/vuepress-plugin-vssue": "^1.4.6",

@@ -1,8 +1,8 @@
 language: node_js
 node_js:
   - lts/*
-install:
-  - ./deploy.sh
+script:
+  - yarn deploy
 deploy:
   provider: pages
   skip_cleanup: true
