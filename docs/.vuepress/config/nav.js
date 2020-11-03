@@ -1,12 +1,15 @@
 module.exports = [
   { text: "首页", link: "/" },
-  // { text: "Guide", link: "/guide/", target: "_blank" },
-  // {
-  //   text: "External",
-  //   link: "https://google.com",
-  //   target: "_self",
-  //   rel: "",
-  // },
+  {
+    text: "计算机",
+    ariaLabel: "计算机组成原理",
+    items: [
+      { text: "操作系统", link: "/computer/system/" },
+      { text: "浏览器工作原理", link: "/computer/browser/" },
+      // { text: "数据结构与算法", link: "/computer/browser/" },
+      // { text: "设计模式", link: "/computer/browser/" },
+    ],
+  },
   {
     text: "前端",
     ariaLabel: "前端知识体系",
@@ -23,8 +26,15 @@ module.exports = [
       { text: "MySQL", link: "/server/mysql/" },
       { text: "MongoDB", link: "/server/mongodb/" },
       { text: "Nginx", link: "/server/nginx/" },
-      { text: "node", link: "/server/node/" },
-      { text: "nestjs", link: "/server/nestjs/" },
+      { text: "Node", link: "/server/node/" },
+      { text: "Nestjs", link: "/server/nestjs/" },
+    ],
+  },
+  {
+    text: "工具",
+    ariaLabel: "工具链",
+    items: [
+      { text: "Docker", link: "/tools/docker/" },
     ],
   },
 ];

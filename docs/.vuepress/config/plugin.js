@@ -1,4 +1,4 @@
-import dayjs from 'dayjs'
+const dayjs = require('dayjs')
 
 module.exports = {
   "@vuepress/last-updated": {
@@ -6,11 +6,9 @@ module.exports = {
       return dayjs(timestamp).format("YYYY-MM-DD HH:mm:ss");
     },
   },
-  "@vuepress/nprogress": true,
+  "@vuepress/nprogress": {},
   "@vuepress/back-to-top": true,
-  "vuepress-plugin-auto-sidebar": {
-    // nav: true
-  },
+  "vuepress-plugin-auto-sidebar": {},
   // https://www.vuepress.cn/plugin/official/plugin-medium-zoom.html#使用
   "@vuepress/medium-zoom": {},
 };
