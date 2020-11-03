@@ -1,5 +1,11 @@
+import dayjs from 'dayjs'
+
 module.exports = {
-  "@vuepress/last-updated": {},
+  "@vuepress/last-updated": {
+    transformer: (timestamp) => {
+      return dayjs(timestamp).format("YYYY-MM-DD HH:mm:ss");
+    },
+  },
   "@vuepress/nprogress": true,
   "@vuepress/back-to-top": true,
   "vuepress-plugin-auto-sidebar": {

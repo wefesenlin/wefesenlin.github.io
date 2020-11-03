@@ -1,4 +1,4 @@
 ---
-title: CSS知识体系
+title: CSS
 ---
 
