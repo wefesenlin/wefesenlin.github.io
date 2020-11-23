@@ -31,3 +31,12 @@ lerna-debug.log*
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+
+# 临时忽略
+docs/computer/**/*
+docs/tools/**/*
+docs/server/**/*
+docs/web/**/*
+docs/case/**/*
+file.js

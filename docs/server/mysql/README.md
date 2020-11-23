@@ -1,3 +1,1 @@
----
-title: MySQL
----
+# MySQL知识地图

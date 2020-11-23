@@ -8,7 +8,7 @@ module.exports = {
   },
   "@vuepress/nprogress": {},
   "@vuepress/back-to-top": true,
-  "vuepress-plugin-auto-sidebar": {},
   // https://www.vuepress.cn/plugin/official/plugin-medium-zoom.html#使用
   "@vuepress/medium-zoom": {},
+  "beautiful-bar": {}
 };

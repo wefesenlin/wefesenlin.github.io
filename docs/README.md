@@ -2,7 +2,7 @@
 home: false
 # navbar: false
 # 自动生成侧边栏
-sidebar: true
+sidebar: 'auto'
 # heroImage: /hero.png
 heroText: Blog 标题
 tagline: Blog 副标题
@@ -23,6 +23,3 @@ features:
   details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
 footer: MIT Licensed | Copyright © 2018-present Evan You
 ---
-
-
-# 记录
