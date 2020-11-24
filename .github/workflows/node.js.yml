@@ -35,7 +35,7 @@ jobs:
         REMOTE_USER: ${{ secrets.SSH_USER }}
         REMOTE_PORT: ${{ secrets.SSH_PORT }}
         SOURCE: dist/
-        TARGET: /root/blog
+        TARGET: ${{ secrets.TARGET }}
         # Arguments to pass to rsync
         ARGS: "-avzr --delete"
 
