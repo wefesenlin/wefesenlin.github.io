@@ -6,8 +6,8 @@ name: Node.js CI
 on:
   push:
     branches: [ docs ]
-  pull_request:
-    branches: [ docs ]
+  # pull_request:
+  #   branches: [ docs ]
 
 jobs:
   build:
@@ -26,18 +26,16 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build --if-present
-    - run: npm test
-      # env:
-        # CI: true
-    - name: ssh deploy
+    # 部署阿里云
+    - name: ssh deploy Aliyun
       uses: easingthemes/ssh-deploy@v2.1.5
       with:
-        SSH_PRIVATE_KEY: ${{ secrets.DEPLOY }}
-        REMOTE_HOST: 47.115.0.145
-        REMOTE_USER: root
-        REMOTE_PORT: 22
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
+        REMOTE_HOST: ${{ secrets.SSH_HOST }}
+        REMOTE_USER: ${{ secrets.SSH_USER }}
+        REMOTE_PORT: ${{ secrets.SSH_PORT }}
         SOURCE: dist/
         TARGET: /root/blog
         # Arguments to pass to rsync
-        ARGS: -rltgoDzvO --delete 
+        ARGS: "-avzr --delete"
 
