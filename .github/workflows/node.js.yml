@@ -26,6 +26,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run buildcd --if-present
+    
     # 部署阿里云
     - name: SSH Deploy Aliyun
       uses: easingthemes/ssh-deploy@v2.1.5
@@ -36,6 +37,5 @@ jobs:
         REMOTE_PORT: ${{ secrets.SSH_PORT }}
         SOURCE: dist/
         TARGET: ${{ secrets.TARGET }}
-        # Arguments to pass to rsync
         ARGS: "-avzr --delete"
 
