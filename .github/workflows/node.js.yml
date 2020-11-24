@@ -27,7 +27,7 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     # 部署阿里云
-    - name: ssh deploy Aliyun
+    - name: SSH Deploy
       uses: easingthemes/ssh-deploy@v2.1.5
       with:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
