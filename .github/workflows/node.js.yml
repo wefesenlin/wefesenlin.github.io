@@ -38,5 +38,6 @@ jobs:
         REMOTE_PORT: 22
         SOURCE: dist/
         TARGET: /root/blog
-        ARGS: -rltgoDzvO --delete # Arguments to pass to rsync
+        # Arguments to pass to rsync
+        ARGS: -rltgoDzvO --delete 
 
