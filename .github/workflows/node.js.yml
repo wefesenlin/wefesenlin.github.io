@@ -24,14 +24,13 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    # 启动CI
     - run: npm ci
-    # 安装依赖
+    # 安装依赖、打包应用
     - run: npm install
-    # 打包应用
     - run: npm run build --if-present
-    # 部署服务器
-    - name: SSH Deploy
+    
+    # 部署阿里云
+    - name: SSH Deploy-Aliyun
       uses: easingthemes/ssh-deploy@v2.1.5
       with:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
