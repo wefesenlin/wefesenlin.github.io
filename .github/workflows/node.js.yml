@@ -25,9 +25,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
-    - run: npm run build --if-present
+    - run: npm run buildcd --if-present
     # 部署阿里云
-    - name: SSH Deploy
+    - name: SSH Deploy Aliyun
       uses: easingthemes/ssh-deploy@v2.1.5
       with:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
