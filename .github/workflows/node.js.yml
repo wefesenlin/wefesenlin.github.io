@@ -35,7 +35,7 @@ jobs:
         SSH_PRIVATE_KEY: ${{ secrets.DEPLOY }}
         REMOTE_HOST: 47.115.0.145
         REMOTE_USER: root
-        REMOTE_PORT: 8081
+        REMOTE_PORT: 3000
         SOURCE: dist/
         TARGET: /root/blog
         ARGS: -rltgoDzvO --delete # Arguments to pass to rsync
