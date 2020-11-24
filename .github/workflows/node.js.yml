@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Github自动部署
+name: VuePress CI
 
 on:
   push:
@@ -17,25 +17,35 @@ jobs:
         node-version: [14.x]
 
     steps:
-    # 获取源码
+    # 检出仓库源码
     - uses: actions/checkout@v2
+
+    # 指定Node版本
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    
+    # 启动CI
     - run: npm ci
+
+    # 安装依赖
+    - name: Install dependencies
     - run: npm install
+
+    # 打包应用
+    - name: Build
     - run: npm run build --if-present
     
-    # 部署阿里云
-    - name: SSH Deploy-Aliyun
+    # 部署服务器
+    - name: SSH Deploy
       uses: easingthemes/ssh-deploy@v2.1.5
       with:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
         REMOTE_HOST: ${{ secrets.SSH_HOST }}
         REMOTE_USER: ${{ secrets.SSH_USER }}
         REMOTE_PORT: ${{ secrets.SSH_PORT }}
-        SOURCE: dist/
+        SOURCE: .vuepress/dist
         TARGET: ${{ secrets.TARGET }}
         ARGS: "-avzr --delete"
 
