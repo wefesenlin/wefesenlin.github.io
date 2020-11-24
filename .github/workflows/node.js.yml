@@ -19,24 +19,17 @@ jobs:
     steps:
     # 检出仓库源码
     - uses: actions/checkout@v2
-
     # 指定Node版本
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    
     # 启动CI
     - run: npm ci
-
     # 安装依赖
-    - name: Install dependencies
     - run: npm install
-
     # 打包应用
-    - name: Build
     - run: npm run build --if-present
-    
     # 部署服务器
     - name: SSH Deploy
       uses: easingthemes/ssh-deploy@v2.1.5
