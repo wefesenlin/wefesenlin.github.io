@@ -6,7 +6,7 @@ const nav = require("./config/nav");
  * see: https://www.vuepress.cn/config/#基本配置
  */
 module.exports = {
-  base: "/blog/",
+  base: "/docs/",
   // 添加浏览器图标
   head: [
     ['link', {rel: 'icon', href: '/assets/img/logo.png'}]
