@@ -37,6 +37,6 @@ jobs:
         REMOTE_USER: ${{ secrets.SSH_USER }}
         REMOTE_PORT: ${{ secrets.SSH_PORT }}
         SOURCE: docs/.vuepress/dist
-        TARGET: blog
+        TARGET: docs
         ARGS: "-avzr --delete"
 
