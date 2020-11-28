@@ -45,7 +45,7 @@ module.exports = [
       // { text: "数据可视化", link: "/case/datav/" },
       // { text: "知乎专栏", link: "/case/zhihu/" },
       // { text: "nestjs服务端", link: "/case/nestjs/" },
-      { text: "线上部署", link: "/case/deploy/" },
+      { text: "部署", link: "/case/deploy/" },
     ],
   },
 ];
