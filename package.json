@@ -1,5 +1,5 @@
 {
-  "name": "blog",
+  "name": "docs",
   "version": "1.0.0",
   "scripts": {
     "serve": "vuepress dev docs",
@@ -9,8 +9,8 @@
   "devDependencies": {
     "@vssue/vuepress-plugin-vssue": "^1.4.6",
     "@vuepress/plugin-medium-zoom": "^1.7.1",
-    "vuepress": "1.5.4",
-    "vuepress-plugin-beautiful-bar": "^1.0.2"
+    "vuepress-plugin-beautiful-bar": "^1.0.2",
+    "vuepress": "1.5.4"
   },
   "dependencies": {
     "dayjs": "^1.9.4"

@@ -1,13 +1,14 @@
 module.exports = [
-  { text: "首页", link: "/" },
+  // { text: "首页", link: "/" },
   // {
   //   text: "计算机",
   //   ariaLabel: "计算机组成原理",
   //   items: [
-  //     { text: "操作系统", link: "/computer/system/" },
-  //     { text: "浏览器工作原理", link: "/computer/browser/" },
-  //     { text: "数据结构与算法", link: "/computer/algorithm/" },
-  //     { text: "设计模式", link: "/computer/pattern/" },
+  //     // { text: "操作系统", link: "/computer/system/" },
+  //     // { text: "浏览器工作原理", link: "/computer/browser/" },
+  //     // { text: "数据结构与算法", link: "/computer/algorithm/" },
+  //     // { text: "设计模式", link: "/computer/pattern/" },
+  //     // { text: "性能优化", link: "/web/performance/" },
   //   ],
   // },
   {
@@ -17,7 +18,6 @@ module.exports = [
       { text: "JavaScript", link: "/web/javascript/" },
       { text: "HTML", link: "/web/html/" },
       { text: "CSS", link: "/web/css/" },
-      // { text: "性能优化", link: "/web/performance/" },
     ],
   },
   // {
@@ -37,12 +37,15 @@ module.exports = [
   //   ariaLabel: "开发运维",
   //   items: [{ text: "Docker", link: "/tools/docker/" }],
   // },
-  // {
-  //   text: "项目实战",
-  //   ariaLabel: "项目实战",
-  //   items: [
-  //     { text: "小慕读书", link: "/case/wechatBook/" },
-  //     { text: "数据可视化", link: "/case/datav/" },
-  //   ],
-  // },
+  {
+    text: "案例",
+    ariaLabel: "案例",
+    items: [
+      { text: "小慕读书", link: "/case/book/" },
+      { text: "数据可视化", link: "/case/datav/" },
+      { text: "知乎专栏", link: "/case/zhihu/" },
+      { text: "nestjs服务端", link: "/case/nestjs/" },
+      { text: "线上部署", link: "/case/deploy/" },
+    ],
+  },
 ];
