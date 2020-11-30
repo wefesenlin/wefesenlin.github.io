@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "serve": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "dep": "./dep.sh"
   },
   "devDependencies": {
     "@vssue/vuepress-plugin-vssue": "^1.4.6",

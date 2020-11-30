@@ -1,5 +1,7 @@
+
+
 # compiled output
-/node_modules
+node_modules
 
 # Logs
 logs
@@ -34,6 +36,7 @@ lerna-debug.log*
 
 
 # 临时忽略
+dep.sh
 docs/computer/browser
 docs/computer/pattern
 docs/computer/system

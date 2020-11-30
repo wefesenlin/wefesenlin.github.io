@@ -227,7 +227,7 @@ server {
   #access_log  /var/log/nginx/host.access.log  main;
 
   location /docs/ {
-      alias /root/web/docs/dist/;
+      alias /root/docs/dist/;
       index  index.html index.htm;
   }
 
